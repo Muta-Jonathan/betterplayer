@@ -67,7 +67,7 @@ class _BetterPlayerMaterialControlsState
     _wasLoading = isLoading(_latestValue);
     if (_latestValue?.hasError == true) {
       return Container(
-        color: Colors.transparent,
+        color: Colors.black.withOpacity(5),
         child: _buildErrorWidget(),
       );
     }
@@ -92,7 +92,7 @@ class _BetterPlayerMaterialControlsState
         }
       },
       child:AbsorbPointer(
-        absorbing: controlsNotVisible,
+
         child: Stack(
           fit: StackFit.expand,
           children: [
