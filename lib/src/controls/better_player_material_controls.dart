@@ -67,7 +67,7 @@ class _BetterPlayerMaterialControlsState
     _wasLoading = isLoading(_latestValue);
     if (_latestValue?.hasError == true) {
       return Container(
-        color: Colors.black.withOpacity(6),
+        color: Colors.transparent,
         child: _buildErrorWidget(),
       );
     }
