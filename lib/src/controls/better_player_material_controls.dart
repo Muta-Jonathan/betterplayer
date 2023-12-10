@@ -67,7 +67,7 @@ class _BetterPlayerMaterialControlsState
     _wasLoading = isLoading(_latestValue);
     if (_latestValue?.hasError == true) {
       return Container(
-        color: Colors.black38,
+        color: Colors.black12,
         child: _buildErrorWidget(),
       );
     }
@@ -107,15 +107,6 @@ class _BetterPlayerMaterialControlsState
               child: _buildTopBar(),
             ),
             Positioned(bottom: 0, left: 0, right: 0, child: _buildBottomBar()),
-            Positioned.fill(
-              // Adjust the background overlay opacity here
-              child: Opacity(
-                opacity: controlsNotVisible ? 1.0 : 0.6, // 60% opacity when controls are visible
-                child: Container(
-                  color: Colors.black,
-                ),
-              ),
-            ),
             _buildNextVideoWidget(),
           ],
         ),
