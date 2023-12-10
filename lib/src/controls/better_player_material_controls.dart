@@ -92,7 +92,7 @@ class _BetterPlayerMaterialControlsState
         }
       },
       child:AbsorbPointer(
-
+        absorbing: controlsNotVisible,
         child: Stack(
           fit: StackFit.expand,
           children: [
