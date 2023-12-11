@@ -204,14 +204,12 @@ class _BetterPlayerCupertinoControlsState
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    Expanded(
-                      child: _buildExpandButton(
-                          backgroundColor,
-                          iconColor,
-                          smallContainerHeight,
-                          smallIconSize,
-                          buttonPadding),
-                    )
+                    _buildExpandButton(
+                        backgroundColor,
+                        iconColor,
+                        smallContainerHeight,
+                        smallIconSize,
+                        buttonPadding)
                   ],
                 ),
               ],
