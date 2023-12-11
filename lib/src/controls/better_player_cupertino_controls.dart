@@ -204,12 +204,14 @@ class _BetterPlayerCupertinoControlsState
                   mainAxisAlignment: MainAxisAlignment.end,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    _buildExpandButton(
-                        backgroundColor,
-                        iconColor,
-                        smallContainerHeight,
-                        smallIconSize,
-                        buttonPadding)
+                    Expanded(
+                      child: _buildExpandButton(
+                          backgroundColor,
+                          iconColor,
+                          smallContainerHeight,
+                          smallIconSize,
+                          buttonPadding),
+                    )
                   ],
                 ),
               ],
@@ -264,35 +266,33 @@ class _BetterPlayerCupertinoControlsState
     );
   }
 
-  Expanded _buildExpandButton(
+  GestureDetector _buildExpandButton(
       Color backgroundColor,
       Color iconColor,
       double barHeight,
       double iconSize,
       double buttonPadding,
       ) {
-    return Expanded(
-      child: GestureDetector(
-        onTap: _onExpandCollapse,
-        child: AnimatedOpacity(
-          opacity: controlsNotVisible ? 0.0 : 1.0,
-          duration: _controlsConfiguration.controlsHideTime,
-          child: ClipRRect(
-            borderRadius: BorderRadius.circular(10),
-            child: Container(
-              height: barHeight,
-              padding: EdgeInsets.symmetric(
-                horizontal: buttonPadding,
-              ),
-              decoration: BoxDecoration(color: backgroundColor),
-              child: Center(
-                child: Icon(
-                  _betterPlayerController!.isFullScreen
-                      ? _controlsConfiguration.fullscreenDisableIcon
-                      : _controlsConfiguration.fullscreenEnableIcon,
-                  color: iconColor,
-                  size: iconSize,
-                ),
+    return GestureDetector(
+      onTap: _onExpandCollapse,
+      child: AnimatedOpacity(
+        opacity: controlsNotVisible ? 0.0 : 1.0,
+        duration: _controlsConfiguration.controlsHideTime,
+        child: ClipRRect(
+          borderRadius: BorderRadius.circular(10),
+          child: Container(
+            height: barHeight,
+            padding: EdgeInsets.symmetric(
+              horizontal: buttonPadding,
+            ),
+            decoration: BoxDecoration(color: backgroundColor),
+            child: Center(
+              child: Icon(
+                _betterPlayerController!.isFullScreen
+                    ? _controlsConfiguration.fullscreenDisableIcon
+                    : _controlsConfiguration.fullscreenEnableIcon,
+                color: iconColor,
+                size: iconSize,
               ),
             ),
           ),
