@@ -348,15 +348,17 @@ class _BetterPlayerMaterialControlsState
         child: AnimatedOpacity(
           opacity: controlsNotVisible ? 0.0 : 1.0,
           duration: _controlsConfiguration.controlsHideTime,
-          child: Container(
-            height: _controlsConfiguration.controlBarHeight,
-            padding: const EdgeInsets.symmetric(horizontal: 8.0),
-            child: Center(
-              child: Icon(
-                _betterPlayerController!.isFullScreen
-                    ? _controlsConfiguration.fullscreenDisableIcon
-                    : _controlsConfiguration.fullscreenEnableIcon,
-                color: _controlsConfiguration.iconsColor,
+          child: Expanded(
+            child: Container(
+              height: _controlsConfiguration.controlBarHeight,
+              padding: const EdgeInsets.symmetric(horizontal: 8.0),
+              child: Center(
+                child: Icon(
+                  _betterPlayerController!.isFullScreen
+                      ? _controlsConfiguration.fullscreenDisableIcon
+                      : _controlsConfiguration.fullscreenEnableIcon,
+                  color: _controlsConfiguration.iconsColor,
+                ),
               ),
             ),
           ),
