@@ -180,69 +180,67 @@ class _BetterPlayerCupertinoControlsState
         margin: EdgeInsets.all(marginSize),
         child: ClipRRect(
           borderRadius: BorderRadius.circular(10),
-          child: SafeArea(
-            child: Container(
-              height: barHeight,
-              child: _betterPlayerController!.isLiveStream()
-                  ? Row(
-                mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                crossAxisAlignment: CrossAxisAlignment.center,
-                children: <Widget>[
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.start,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      const SizedBox(width: 8),
-                      if (_controlsConfiguration.enablePlayPause)
-                        _buildPlayPause(_controller!, iconColor, barHeight)
-                      else
-                        const SizedBox(),
-                      const SizedBox(width: 8),
-                      _buildLiveWidget(),
-                    ],
-                  ),
-                  Row(
-                    mainAxisAlignment: MainAxisAlignment.end,
-                    crossAxisAlignment: CrossAxisAlignment.center,
-                    children: [
-                      _buildExpandButton(
-                          backgroundColor,
-                          iconColor,
-                          smallContainerHeight,
-                          smallIconSize,
-                          buttonPadding)
-                    ],
-                  ),
-                ],
-              )
-                  : Row(
-                children: <Widget>[
-                  if (_controlsConfiguration.enableSkips)
-                    _buildSkipBack(iconColor, barHeight)
-                  else
-                    const SizedBox(),
-                  if (_controlsConfiguration.enablePlayPause)
-                    _buildPlayPause(_controller!, iconColor, barHeight)
-                  else
-                    const SizedBox(),
-                  if (_controlsConfiguration.enableSkips)
-                    _buildSkipForward(iconColor, barHeight)
-                  else
-                    const SizedBox(),
-                  if (_controlsConfiguration.enableProgressText)
-                    _buildPosition()
-                  else
-                    const SizedBox(),
-                  if (_controlsConfiguration.enableProgressBar)
-                    _buildProgressBar()
-                  else
-                    const SizedBox(),
-                  if (_controlsConfiguration.enableProgressText)
-                    _buildRemaining()
-                  else
-                    const SizedBox()
-                ],
-              ),
+          child: Container(
+            height: barHeight,
+            child: _betterPlayerController!.isLiveStream()
+                ? Row(
+              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+              crossAxisAlignment: CrossAxisAlignment.center,
+              children: <Widget>[
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.start,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    const SizedBox(width: 8),
+                    if (_controlsConfiguration.enablePlayPause)
+                      _buildPlayPause(_controller!, iconColor, barHeight)
+                    else
+                      const SizedBox(),
+                    const SizedBox(width: 8),
+                    _buildLiveWidget(),
+                  ],
+                ),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.end,
+                  crossAxisAlignment: CrossAxisAlignment.center,
+                  children: [
+                    _buildExpandButton(
+                        backgroundColor,
+                        iconColor,
+                        smallContainerHeight,
+                        smallIconSize,
+                        buttonPadding)
+                  ],
+                ),
+              ],
+            )
+                : Row(
+              children: <Widget>[
+                if (_controlsConfiguration.enableSkips)
+                  _buildSkipBack(iconColor, barHeight)
+                else
+                  const SizedBox(),
+                if (_controlsConfiguration.enablePlayPause)
+                  _buildPlayPause(_controller!, iconColor, barHeight)
+                else
+                  const SizedBox(),
+                if (_controlsConfiguration.enableSkips)
+                  _buildSkipForward(iconColor, barHeight)
+                else
+                  const SizedBox(),
+                if (_controlsConfiguration.enableProgressText)
+                  _buildPosition()
+                else
+                  const SizedBox(),
+                if (_controlsConfiguration.enableProgressBar)
+                  _buildProgressBar()
+                else
+                  const SizedBox(),
+                if (_controlsConfiguration.enableProgressText)
+                  _buildRemaining()
+                else
+                  const SizedBox()
+              ],
             ),
           ),
         ),
