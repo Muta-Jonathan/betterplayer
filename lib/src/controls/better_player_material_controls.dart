@@ -290,7 +290,6 @@ class _BetterPlayerMaterialControlsState
               flex: 75,
               child: Row(
                 children: [
-                  const SizedBox(width: 10,),
                   if (_controlsConfiguration.enablePlayPause)
                     _buildPlayPause(_controller!)
                   else
