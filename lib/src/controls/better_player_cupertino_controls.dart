@@ -191,7 +191,7 @@ class _BetterPlayerCupertinoControlsState
                   mainAxisAlignment: MainAxisAlignment.start,
                   crossAxisAlignment: CrossAxisAlignment.center,
                   children: [
-                    const SizedBox(width: 8),
+                    const SizedBox(width: 10),
                     if (_controlsConfiguration.enablePlayPause)
                       _buildPlayPause(_controller!, iconColor, barHeight)
                     else
