@@ -336,6 +336,9 @@ class _BetterPlayerMaterialControlsState
       ),
       child:Text(
         _betterPlayerController!.translations.controlsLive,
+        style: TextStyle(
+          color: Colors.white
+        ),
       ),
     );
   }
