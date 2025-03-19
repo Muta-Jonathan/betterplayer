@@ -177,7 +177,7 @@ class _BetterPlayerWithControlsState extends State<BetterPlayerWithControls> {
         return controlsConfiguration.customControlsBuilder!(
             betterPlayerController, onControlsVisibilityChanged);
       } else if (playerTheme == BetterPlayerTheme.material) {
-        return _buildMaterialControl();
+        return _buildCupertinoControl();
       } else if (playerTheme == BetterPlayerTheme.cupertino) {
         return _buildCupertinoControl();
       }
