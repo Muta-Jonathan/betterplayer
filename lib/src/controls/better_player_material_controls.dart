@@ -563,7 +563,7 @@ class _BetterPlayerMaterialControlsState
       onTap: _onPlayPause,
       child: Container(
         height: double.infinity,
-        margin: const EdgeInsets.symmetric(horizontal: 4),
+        margin: const EdgeInsets.symmetric(horizontal: 10),
         padding: const EdgeInsets.symmetric(horizontal: 12),
         child: Icon(
           controller.value.isPlaying
