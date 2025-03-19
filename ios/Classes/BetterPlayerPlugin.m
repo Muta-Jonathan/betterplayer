@@ -121,7 +121,7 @@ bool _remoteCommandsInitialized = false;
     [[UIApplication sharedApplication] endReceivingRemoteControlEvents];
 }
 
-- (void) setupRemoteCommands:(BetterPlayer*)player, skipForwardTimeInMilliseconds, skipBackwardTimeInMilliseconds {
+- (void) setupRemoteCommands:(BetterPlayer*)player, (NSInteger)skipForwardTimeInMilliseconds, (NSInteger)skipBackwardTimeInMilliseconds {
     if (_remoteCommandsInitialized){
         return;
     }
